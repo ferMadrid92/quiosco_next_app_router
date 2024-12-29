@@ -28,7 +28,7 @@ export default function OrdersPage() {
         onClick={handleManualRefresh}
         className="bg-black w-full lg:w-auto text-xl px-10 py-3 text-center text-white font-bold cursor-pointer hover:bg-amber-400 hover:text-black"
       >
-        Actualizar Ordenes
+        Actualizar Órdenes
       </button>
       {data.length ? (
         <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-5 gap-5 mt-5">

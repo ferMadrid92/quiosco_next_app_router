@@ -1,12 +1,14 @@
 import { completeOrder } from "@/actions/complete-order-action"
 import { OrderWithProducts } from "@/src/types"
 import { formatCurrency } from "@/src/utils"
+import { toast } from "react-toastify"
 
 type OrderCardProps = {
     order: OrderWithProducts
 }
 
 export default function OrderCard({ order }: OrderCardProps) {
+
 
     return (
         <section
@@ -34,12 +36,15 @@ export default function OrderCard({ order }: OrderCardProps) {
                 </div>
             </dl>
 
-            <form action={completeOrder}>
+            <form action={async (formData) => {
+                await completeOrder(formData);
+                toast.success("Orden Completada");
+            }}>
                 <input type="hidden" value={order.id} name="order_id" />
                 <input
                     type="submit"
                     className="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer"
-                    value='Marcar Orden Completada'
+                    value='Orden Completada'
                 />
             </form>
         </section>

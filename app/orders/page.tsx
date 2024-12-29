@@ -24,14 +24,14 @@ export default function OrdersPage() {
 
   if(data) return (
     <>
-      <h1 className="text-center mt-20 text-6xl font-black">Ordenes Listas</h1>
+      <h1 className="text-center mt-20 text-6xl font-black">Órdenes Listas</h1>
       <Logo />
       <div className="flex justify-center">
         <button
           onClick={handleManualRefresh}
           className="bg-black w-full lg:w-auto text-xl px-10 py-3 text-center text-white font-bold cursor-pointer hover:bg-amber-400 hover:text-black mt-5"
         >
-          Actualizar Ordenes
+          Actualizar Órdenes
         </button>
       </div>
 
@@ -42,7 +42,7 @@ export default function OrdersPage() {
           ))}
         </div>
       ) : (
-        <p className="text-center my-10">No hay ordenes listas</p>
+        <p className="text-center my-10">No hay Órdenes listas</p>
       )}
     </>
   );
